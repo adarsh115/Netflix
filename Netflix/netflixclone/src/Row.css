@@ -27,6 +27,7 @@
   max-height: 100px;
   margin-right: 10px;
   transition: transform 400ms;
+  border-radius: 3px;
 }
 
 .row__posterLarge {

@@ -2,9 +2,12 @@ import React, {useState, useEffect} from 'react'
 import instance from './axios';
 import "./Row.css";
 
+
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, islargeRow }) {
+
     const [movies, setMovies] = useState([]);
+   
 
     useEffect(() => {
         async function fetchData() {
@@ -15,8 +18,9 @@ function Row({ title, fetchUrl, islargeRow }) {
         fetchData();
     }, [fetchUrl]);
 
+      
 
-
+   
     return (
         <div className="row">
             {/* title */}
