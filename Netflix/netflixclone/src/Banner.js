@@ -20,19 +20,22 @@ function Banner() {
     function truncate (str, n) {
         return (str?.length > n ? str.substr(0, n-1)+ "..." : str);
     }
-
+    const bannerImage = 'https://image.tmdb.org/t/p/original/';
+    const url = `${ bannerImage }${ movie.backdrop_path}`;
+    console.log(url)
     return (
+        
         <header className="banner" style = {{
                 backgroundSize: "cover",
-                backgroundImage: `url(https://image.tmdb.org/t/p/original/"${movie?.backdrop_path})`, 
-                backgroundPosition: "center center"
+                backgroundImage: `url(${url})`, 
+                backgroundPosition: "center"
             }}>
             
             <div className="banner__contents">
                 {/* title */}
                 <h1 className="banner__title">{movie?.name || movie?.original_name ||movie?.title}</h1>
                 <div className='banner__buttons'>
-                    <button className= "banner__button">Play</button>
+                    <button className= "banner__button" >Play</button>
                     <button className= "banner__button">My List</button>
                 </div>
                 {/* description */}
@@ -40,9 +43,11 @@ function Banner() {
                     {truncate(movie?.overview, 150)}
                 </h1>
             </div>
+            <div className="banner--fadebottom"></div>
 
         </header>
     )
+    
 }
 
 export default Banner
