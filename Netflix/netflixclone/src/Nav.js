@@ -19,6 +19,7 @@ function Nav() {
             className ="nav__logo"
             src='/netflix1.png'
             alt ='Netflix Logo'/>
+       
         <img 
             className ="avatar__logo"
             src='/avatar.png'
